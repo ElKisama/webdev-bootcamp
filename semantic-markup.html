@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEMANTIC MARKUP</title>
+  </head>
+  <body>
+    <!-- El header se usa para agrupar todo el contenido que puede usarse ocmo introductorio -->
+    <!-- para el documento -->
+    <header>
+      <!-- Generalmente se colocan navbars, logos, parrafos introductorios, etc -->
+      <!-- El elemento nav es usado para poder agrupar links de navegacion -->
+      <h3>HEADER</h3>
+      <nav>
+        <!-- Lo mas comun es hacer una lista dentro del nav para presentar los links -->
+        <ul>
+          <li><a href="/html-essentials.html">HTML ESSENTIALS</a></li>
+          <li><a href="/html-semantics.html">HTML SEMANTICS</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main se comporta igual que un div, pero nos sirve para saber que sera -->
+    <!-- la seccion con el contenido principal -->
+    <main>
+      <!-- Un documento no deberia tener mas de un main visible -->
+      <!-- En el main deberian ir solo los elementos dominantes y centrales del documento -->
+      <!-- elementos que se repitan entre paginas como una navbar deberian estar fuera -->
+      <h1>SEMANTIC MARKUP</h1>
+      <!-- Las sections se usan para ir dividiendo el contenido del documento en varios segmentos -->
+      <section>
+        <h3>Section 1: una lista en una seccion</h3>
+        <ol>
+          <li>Elemento 1</li>
+          <li>Elemento 2</li>
+          <li>Elemento 3</li>
+        </ol>
+      </section>
+      <section>
+        <h3>Section 2: un parrafo en una seccion y un articulo</h3>
+        <p>
+          Soy un parrafo dentro de main! (dentro de una seccion)
+          <!-- El elemento aside se utiliza para agrupar contenido que se relaciona -->
+          <!-- indirectamente con el contenido principal, pueden ser sidebars, o call-out boxes -->
+          <aside>
+              <p><a href="https://stripe.com/es-us" target="blank">Stripe</a> es un sitio web que utiliza bien el concepto de semantic markup (esto es un aside)</p>
+
+          </aside>
+        </p>
+        <!-- Los article sirven para representar una agrupacion de contenido que se intenta -->
+        <!-- usar de manera independiente y que sea reusable, puede ser una noticia, un post -->
+        <!-- una tarjeta de algun producto, una noticia, un comentario, un widget, etc -->
+        <article>
+          <!-- Dentro del articulo puede ir lo que sea, incluidos otros articulos -->
+          <h1>Mi articulo</h1>
+          <ul>
+            <li>Nombre: Redmi Note 9s</li>
+            <li> 
+                <!-- El elemento details y summary sirven para agrupar contenido dentro de un bloque -->
+                <!-- que para mostrar su informacion debe pasar al estado open al clickearse -->
+                <!-- a este elemento tambien se le conoce como twisties por el triangulo que gira 'twists' -->
+                <details>
+                    <summary>Ver Precio</summary>
+                    $190.000
+                </details>
+            </li>
+          </ul>
+          <!-- La info de autoria de un article puede incluirse en el elemnto address -->
+          <address>Creado por ElKisama</address>
+          <!-- Pero para los articles que puedan haber nested dentro del principal no funciona -->
+        </article>
+        <article>
+          <h1>Otro articulo nested (podria ser un comentario en un blog)</h1>
+          <p>La vola mala loco</p>
+          <address>Creado por wn random</address>
+        </article>
+        <!-- Si se coloca otro address en un article nested no se diferencia si la autoria indica para -->
+        <!-- el articulo padre o para el nested -->
+      </section>
+    </main>
+    <!-- Contrario al header, el footer se ocupa para agrupar contenido que va al pie de la pagina -->
+    <!-- ya sea copyright, info de contacto, mas navbars, etc. -->
+    <footer>
+      <h3>FOOTER</h3>
+      <nav>
+        <ul>
+          <li>Sobre Nosotros</li>
+          <li>Mas info</li>
+          <li>Nuestras redes sociales</li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

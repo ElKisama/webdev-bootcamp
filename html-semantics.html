@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML SEMANTICS</title>
+  </head>
+  <body>
+    <h1>HTML SEMANTICS</h1>
+    <h2>Block vs Inline Elements</h2>
+    <!-- Elementos en block level ocupan todo el espacio disponible (un bloque), -->
+    <!-- algunos ejemplos: los h's, los p's y los div's -->
+    <p>Soy un parrafo!</p>
+    <!-- Mientras que los inline pueden compartir espacio, ejemplo: los a's, las -->
+    <!-- img's -->
+    <p>
+      Soy un block element!
+      <a href="/html-essentials.html">Yo soy un inline element!</a>
+    </p>
+    <h3>DIV Elements</h3>
+    <!-- Los divs son elementos genericos de block level que sirven para agrupar elementos -->
+    <div class="Contenedor">
+      <p>Soy un parrafo dentro de un div!</p>
+    </div>
+    <h3>SPAN Elements</h3>
+    <!-- Es lo mismo que un div pero inline -->
+    <span>
+      <p>Soy un parrafo dentro de un span!</p>
+      <!-- Nota: Ya que un parrafo es un elemento nivel bloque, el span termina mostrandolo a este mismo nivel. -->
+      <!-- Si pusieramos un elemento inline, el span seguiria mostrandose inline -->
+    </span>
+    <span>
+      <!-- Como sucede aca -->
+      <a href="/html-essentials.html">Soy un enlace en un span!</a>
+    </span>
+    <h2>Br Element</h2>
+    <!-- El br permite introducir breaks en el texto para poder separarlos -->
+    <!-- sin embargo no es muy recomendado hacerlo asi y es mejor dejarselo al css -->
+    <p>
+      Los elementos br sirven para
+      <br />
+      Hacer 'line breaks' en el texto
+      <br />
+      Lo que permite 'hacer espacios' entre texto
+    </p>
+    <h2>SUP, SUB Elements</h2>
+    <!-- Superscript y subscript elements permiten hacer 'superindices' y 'subindices' -->
+    <!-- respectivamente -->
+    <!-- Dentro de los sup o los sub se pueden anadir mas elementos, lo mas usado es poner un anchor, para hacer referencias -->
+    <p>
+      Este es un parrafo<sup
+        >Este es un
+        <a
+          href="https://es.wikipedia.org/wiki/Sub%C3%ADndice_y_super%C3%ADndice"
+          >superindice</a
+        ></sup
+      >
+      normal
+      <sub>Y este un sub indice</sub>
+    </p>
+    <h2>Entity Codes</h2>
+    <!-- Son codigos que sirven para introducir simbolos en el html, util para cuando queremos -->
+    <!-- introducir un caracter reservado por html -->
+    <!-- Comienzan con & y terminan con ; -->
+    <p>Por ejemplo queremos introducir un &lt; y un &gt;</p>
+    <h2>Semantic Markup</h2>
+    <!-- Consiste en estructurar nuestro html de forma tal que le demos un significado mayor -->
+    <!-- a cada elemento y no rellenar solo con divs que no significan nada -->
+    <a href="/semantic-markup.html">Ir a semantic markup</a>
+  </body>
+</html>
