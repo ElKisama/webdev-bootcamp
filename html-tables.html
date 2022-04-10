@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms and Tables</title>
+  </head>
+  <body>
+    <main>
+      <h1>Forms and Tables</h1>
+      <section>
+        <article>
+          <h1>Heaviest Birds</h1>
+          <table>
+            <!-- El elemento thead sirve para segmentar el contenido de la tabla y definir el header -->
+            <thead>
+              <!-- Para darle formato de tabla a cada elemento debemos envolver en el elemento tr -->
+              <!-- Para colocar encabezados debemos usar el elemento th en una tr -->
+              <tr>
+                <!-- El atributo rowspan permite decirle al elemento cuantos espacios deberia ocupar en las filas -->
+                <th rowspan="2">Animal</th>
+                <!-- Mientras que el colspan es lo mismo pero en las columnas -->
+                <th colspan="2">Average Mass</th>
+                <th rowspan="2">Flighted</th>
+              </tr>
+              <tr>
+                <th>KG</th>
+                <th>LB</th>
+              </tr>
+            </thead>
+            <!-- El tbody se usa igual que el thead pero para definir el contenido central de la tabla -->
+            <tbody>
+              <!-- Fila 1 -->
+              <tr>
+                <!-- El elemento td representa una celda de data en una tabla -->
+                <td>Ostrich</td>
+                <td>104</td>
+                <td>230</td>
+                <td>No</td>
+              </tr>
+              <!-- Fila 2 -->
+              <tr>
+                <td>Wild Turkey</td>
+                <td>13</td>
+                <td>29.8</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+            <!-- Tambien existe el elemento tfoot pero no es muy utilizado -->
+            <tfoot></tfoot>
+          </table>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

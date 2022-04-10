@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORMS</title>
+  </head>
+  <body>
+    <main>
+      <h1>Forms</h1>
+      <article>
+        <h1>Mi Formulario</h1>
+        <!-- El elemento form al igual que el table, no muestra nada por si, sino que da paso para agrupar -->
+        <!-- los elementos que compondran el formulario -->
+        <!-- El atributo action indica a donde se enviaran los datos ingresados en el formulario -->
+        <!-- El atributo method indica que metodo HTTP se debe usar -->
+        <form action="/form">
+          <!-- Para conformar el formulario se usa el elemento input -->
+          <!-- Existen muchos tipos de input, para cambiarlo lo especificamos con el atributo type -->
+          <!-- El atributo placeholder sirve para poner texto en algunos inputs cuando no se ha escrito nada -->
+          <!-- El atributo name sirve para hacer mas facil de entender a que input corresponde la data enviada al server -->
+          <!-- Ponerle name a los inputs es super importante ya que hace mas facil de procesar la data enviada -->
+          <p>
+            <!-- Estamos colocando los inputs dentro de p's para hacerlos block level, pero no es necesario cuando trabajemos con css -->
+            <label for="usrname">Enter your username:</label>
+            <input
+              type="text"
+              placeholder="Username"
+              id="usrname"
+              name="username"
+            />
+          </p>
+          <p>
+            <label for="password">Enter your password:</label>
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              id="password"
+            />
+          </p>
+          <p>
+            <label for="color">Pick a color:</label>
+            <input type="color" id="color" name="color" />
+          </p>
+          <p>
+            <label for="number">Enter a number:</label>
+            <input
+              type="number"
+              id="number"
+              placeholder="Number"
+              name="number"
+            />
+          </p>
+          <p>
+            <!-- El elemento label sirve para ponerle etiquetas y vincularlas a los inputs -->
+            <!-- la vinculacion se hace mediante la id del elemento y el atributo for del label -->
+            <label for="cheese">Do you like cheese?</label>
+            <input type="checkbox" id="cheese" name="cheese" />
+          </p>
+          <!-- El elemento button en un form por defecto envia la informacion del formulario -->
+          <button>Submit</button>
+          <!-- Podemos hacer lo mismo con el input type submit, pero no es muy recomendado -->
+          <input type="submit" value="Boton input" />
+          <!-- Para evitar que el boton envie la data hay q especificar el type button -->
+          <button type="button">Boton que no hace chota</button>
+        </form>
+        <!-- Aqui no -->
+        <button>Button Outside</button>
+      </article>
+      <article>
+        <h1>Otro form</h1>
+        <form action="/form2">
+          <p>
+            <!-- Los h2's tiran error porque no se deberian poner dentro de un p -->
+            <!-- <h2>Checkbox Input</h2> -->
+            <input type="checkbox" name="agree_tos" id="agree" />
+            <label for="agree">I Agree to everything</label>
+          </p>
+          <p>
+            <!-- <h2>Radio Buttons</h2> -->
+            <!-- Radio buttons en un grupo de radio buttons comparten 1 sola respuesta-->
+            <!-- Para hacer que compartan un grupo deben tener el mismo nombre -->
+            <!-- Por defecto los radio buttons envian 'on' si estan checked, lo que no es muy util -->
+            <!-- para elegir que enviar hay que definir el atributo value -->
+            <label for="s">S</label>
+            <input type="radio" name="size" id="s" value="s" />
+            <label for="m">M</label>
+            <input type="radio" name="size" id="m" value="m" />
+            <label for="l">L</label>
+            <input type="radio" name="size" id="l" value="l" />
+          </p>
+          <p>
+            <!-- <h2>Select Input</h2> -->
+            <label for="meal">Meal:</label>
+            <select name="meal" id="meal">
+              <option value="">-- Please Select an Option --</option>
+              <option value="fish">Fish</option>
+              <option value="veg">Vegetarian</option>
+              <option value="steak">Steak</option>
+            </select>
+          </p>
+          <p>
+            <!-- <h2>Range Input</h2> -->
+            <label for="volume">Volume:</label>
+            <input
+              type="range"
+              name="volume"
+              id="volume"
+              value="50"
+              min="0"
+              max="100"
+              step="2"
+            />
+          </p>
+          <button>Submit</button>
+        </form>
+      </article>
+      <article>
+        <h1>Form Validation</h1>
+        <!-- Generalmente las validaciones de los forms se hacen en javascript, pero existen algunas -->
+        <!-- validaciones basicas built in html -->
+        <form action="/form3">
+          <p>
+            <label for="username">Username</label>
+            <!-- Atributo required indica que es el input es obligatorio -->
+            <input type="text" id="username" placeholder="username" required />
+          </p>
+          <p>
+            <label for="num">Enter a number:</label>
+            <!-- Min y max permiten establecer valores minimos y maximos -->
+            <input type="number" name="num" id="num" min="1" max="20" />
+          </p>
+          <p>
+            <!-- Tipo email verifica que tenga una @ pero igual puede colarse un email falso -->
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </p>
+          <button>Submit</button>
+        </form>
+      </article>
+    </main>
+  </body>
+</html>
