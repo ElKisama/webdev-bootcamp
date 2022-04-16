@@ -1,0 +1,45 @@
+/* CSS Selectors */
+/* Si escribimos el nombre del elemento, cambiamos el estilo de TODOS los elementos de */
+/* ese tipo */
+
+button {
+  color: white; /*En este caso, todos los button serán de color rojo*/
+  /* Cambiarle el color a un button le cambia el color a la fuente pero no al boton en si */
+  background-color: teal;
+  /* El bg color le cambia el color al button */
+}
+
+main {
+  background-color: aquamarine;
+}
+
+body {
+  background-color: beige;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  background-color: #006080;
+}
+
+/* Text Properties */
+h1 {
+  text-align: center;
+}
+
+.text-properties {
+  font-family: Roboto, Arial, monospace;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 400; /* normal, 700 for bold */
+  line-height: 20px; /* Altura de cada linea de texto */
+  letter-spacing: 1px; /* Separacion entre cada letra */
+}
+
+.under {
+  /* Text decoration cambia los efectos adicionales que puede tener un texto */
+  /* como el subrayado o el rayado */
+  text-decoration: underline;
+  /* Para hacer todo en mayus */
+  text-transform: uppercase;
+}
